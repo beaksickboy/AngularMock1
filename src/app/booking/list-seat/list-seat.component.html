@@ -1,0 +1,23 @@
+<div class="card " style="width: 20em;">
+  <div class="container">
+    <div class="row ">
+      <div class="col-3" *ngFor="let seat of arrSeat; index as i">
+        <a (click)="toggle(i, seat.id)" class="btn" [ngClass]="{disabled: seat.isAvailable === 2? true: false}">
+          <img [src]="getImage(seat.isAvailable)" alt="sdsd" height="35px" width="35px">
+          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+        </a>
+      </div>
+    </div>
+    <div class="row" style="border-top:0.5px solid gray; background-color: floralwhite">
+      <div class="col-4" style="text-align: center;">
+        <p>Available<img class="ps" src="../../../assets/black.svg" alt="choosing"></p>
+      </div>
+      <div class="col-4" style="text-align: center;">
+        <p>Choosing<img class="ps" src="../../../assets/green.svg" alt="choosing"></p>
+      </div>
+      <div class="col-4" style="text-align: center;">
+        <p>Booked<img class="ps" src="../../../assets/red.svg" alt="choosing"></p>
+      </div>
+    </div>
+  </div>
+</div>

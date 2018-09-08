@@ -1,0 +1,14 @@
+<table class="table tab">
+    <tr>
+        <th>Route</th>
+        <th>Times</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    <tr  *ngFor="let r of routes">
+        <td>{{r.from}} <img src="../../../assets/arrow.png"> {{r.to}}</td>
+        <td>{{r.date}}</td>
+        <td>{{r.price}}đ</td>
+        <td><button class="btn btn-danger bt" routerLink="/chooseSeat" >Book</button></td>
+    </tr>
+</table>

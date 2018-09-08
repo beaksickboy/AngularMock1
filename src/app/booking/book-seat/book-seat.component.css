@@ -1,0 +1,25 @@
+form{
+   width: 100%;
+   margin-top: 20px;
+}
+a.but{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+h3 {
+    text-align: center;
+}
+div.but{
+    float:right;
+    margin-right: 27%;
+}
+
+a{
+    margin-left: 20px;
+}
+
+.but{
+    margin: auto;
+    margin-top: 20px; 
+}
