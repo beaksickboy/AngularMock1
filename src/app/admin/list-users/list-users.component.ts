@@ -5,6 +5,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import * as $ from 'jquery';
 import 'datatables.net';
 import 'datatables.net-bs4';
+import { User2 } from '../../share/user2.model';
 
 @Component({
   selector: 'app-list-users',
@@ -15,7 +16,7 @@ export class ListUsersComponent implements OnInit {
 
 
   constructor(private userService: UserService) { }
-  users: User[] = this.userService.user;
+  users: User2[] = this.userService.user;
   ngOnInit() {
 
     this.loadUser();
@@ -28,8 +29,9 @@ export class ListUsersComponent implements OnInit {
 
   loadUser() {
     this.userService.getUsers().subscribe(
-      (users) => {
-        this.users = users;
+      (users) => { 
+        console.log(users['content'])
+        this.users= users['content']
       }
     );
   }
