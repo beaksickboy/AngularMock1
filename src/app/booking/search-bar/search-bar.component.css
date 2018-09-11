@@ -1,0 +1,29 @@
+form{
+    width: 90%;
+    margin:auto;
+    padding: 0px 10em;
+    
+}
+.convert{
+    max-height: 40px;
+    max-width: 50px;
+    border-radius: 20%;
+    background-color:white;
+    
+}
+
+.img-con{
+    height:100%;
+    width: 100%;
+}
+
+input[type='text']{
+    background: url(../../../assets/location1.png)  no-repeat scroll 7px 7px;
+    background-position: right;
+}
+
+.sub{
+    margin-left:30%;
+    width: 20%;
+}
+

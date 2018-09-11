@@ -1,0 +1,36 @@
+.card-width {
+    max-width: 30vw;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 20vh;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.img-left {
+    width: 50%;
+    margin-left:25%;
+
+}
+
+.eye {
+    background-image: url("../../../assets/eye.png");
+    background-repeat: no-repeat;
+    width: 37px;
+}
+
+.hideEye {
+    background-image: url("../../../assets/invisible.png");
+    background-repeat: no-repeat;
+    width: 37px;
+}
+
+.align {
+    margin-left: 40%;
+}
+
+.bt{
+    width: 30%;
+}

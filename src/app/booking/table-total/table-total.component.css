@@ -1,0 +1,22 @@
+.card{
+    margin-top: 40px; 
+}
+
+.row{
+    padding: 5px 5px;
+}
+
+div>p.price{
+    margin-left: 8em;
+    font-weight: bold;
+}
+
+div>p.price2{
+    margin-left: 9em;
+    font-weight: bold;
+}
+
+div>p.id{
+ overflow: initial;
+margin-left:1em;
+}
