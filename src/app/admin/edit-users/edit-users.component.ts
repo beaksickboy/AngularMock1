@@ -17,7 +17,8 @@ export class EditUsersComponent implements OnInit {
   userRole: number;
   userId: number;
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute, private us: UserService, private loc: Location, private router: Router) { }
+  constructor(private fb: FormBuilder, private route: ActivatedRoute, private us: UserService,
+    private loc: Location, private router: Router) { }
 
   ngOnInit() {
     this.editForm = this.fb.group({
@@ -29,14 +30,14 @@ export class EditUsersComponent implements OnInit {
     });
 
     this.getUser();
-    
+
   }
 
   submit() {
 
-    this.assignUser(this.editForm.value)
-   
-    
+    this.assignUser(this.editForm.value);
+
+
   }
 
   getUser(): void {
@@ -69,7 +70,7 @@ export class EditUsersComponent implements OnInit {
         this.router.navigate(['/listUsers']);
       }
     );
-   
+
   }
 
   generateValue(user: User) {
@@ -91,7 +92,7 @@ export class EditUsersComponent implements OnInit {
     this.userRole = s.value;
   }
 
-  goBack(){
+  goBack() {
     this.loc.back();
   }
 }

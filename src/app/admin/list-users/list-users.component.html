@@ -35,7 +35,7 @@
       </tbody>
 
       <footer class="fixed-bottom">
-        <!-- <ul class="pagination justify-content-center" style="margin:20px 0">
+        <ul class="pagination justify-content-center" style="margin:20px 0">
           <li class="page-item" [ngClass]="{'disabled': currentPage === 0 ? true: false}">
             <a class="page-link" (click)="loadUserByIndex(0)">First</a>
           </li>
@@ -47,9 +47,9 @@
           <li class="page-item" [ngClass]="{'disabled': currentPage === maxPage  ? true: false}">
             <a class="page-link" (click)="loadUserByIndex(totalPages.length -1)">Last</a>
           </li>
-        </ul> -->
+        </ul>
 
-        <ul class="pagination justify-content-center" style="margin:20px 0">
+        <!-- <ul class="pagination justify-content-center" style="margin:20px 0">
           <li class="page-item" [ngClass]="{disabled:pager.currentPage === 0}">
             <a (click)="loadUserByIndex(0)">First</a>
           </li>
@@ -65,7 +65,7 @@
           <li class="page-item" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
             <a (click)="loadUserByIndex(totalPages.length -1)">Last</a>
           </li>
-        </ul>
+        </ul> -->
       </footer>
 
     </table>

@@ -13,7 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RoutingModule } from './app-routing.module';
 
 import { BookingModule } from './booking/booking.module';
-import { adminModule } from './admin/admin.module';
+import { AdminModule } from './admin/admin.module';
 
 
 
@@ -29,13 +29,13 @@ import { adminModule } from './admin/admin.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
+
 
 
     AuthModule,
     BookingModule,
     RoutingModule,
-    adminModule,
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

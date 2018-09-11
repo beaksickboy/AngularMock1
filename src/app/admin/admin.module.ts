@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { adminRoutingModule } from './admin-routing.module';
-import {DataTableModule} from "angular-6-datatable";
+import { AdminRoutingModule} from './admin-routing.module';
 
 import { ListUsersComponent } from './list-users/list-users.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
@@ -15,11 +14,7 @@ import { EditUsersComponent } from './edit-users/edit-users.component';
         CommonModule,
         ReactiveFormsModule,
         FormsModule,
-        adminRoutingModule,
-        DataTableModule,
-        
-
-    ],
+        AdminRoutingModule],
     declarations: [
         ListUsersComponent,
         AdminHomeComponent,
@@ -29,5 +24,5 @@ import { EditUsersComponent } from './edit-users/edit-users.component';
 })
 
 
-export class adminModule {
+export class AdminModule {
 }

@@ -19,7 +19,7 @@ export class ListUsersComponent implements OnInit {
   totalPages: number[];
   currentPage: number;
   maxPage: number;
-  pager: any = {};
+  // pager: any = {};
 
   ngOnInit() {
 
