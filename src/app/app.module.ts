@@ -26,9 +26,11 @@ import { adminModule } from './admin/admin.module';
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
-    FormsModule,  
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    
+
 
     AuthModule,
     BookingModule,
