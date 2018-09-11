@@ -11,7 +11,8 @@ export class UserService {
 
     user: User[] = [];
     userChangeSubject = new Subject<boolean>();
-
+    userSearchSubject = new Subject<boolean>();
+    
     constructor(private httpClient: HttpClient) { }
 
     getUsers() {
@@ -34,5 +35,7 @@ export class UserService {
         return this.httpClient.post<User>('http://localhost:8080/api/users/create/' + rID, u);
     }
 
-
+    searchName(name) {
+        return this.httpClient.get<User[]>('http://localhost:8080/api/users/name=' + name );
+    }
 }

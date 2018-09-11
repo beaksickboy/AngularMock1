@@ -2,14 +2,26 @@
   <a [routerLink]="['home']" class="navbar-brand">
     <img src="../../assets/bus_logo.png" alt="Home">
   </a>
-  <div *ngIf="!authService.isAdmin" class="dropdown">
-    <a  class="collapse navbar-collapse nav-link" role="button" id="dropdownMenuLink" data-toggle="dropdown" data-hover="dropdown" 
-      aria-haspopup="true" aria-expanded="false">Manage User</a>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" [routerLink]="['listUsers']" >List Users</a>
-      <a class="dropdown-item" [routerLink]="['/addUser']" routerLinkActive="router-link-active"  >Create User</a>
-    </div>
-  </div>
+
+  <ul class="navbar-nav mr-auto">
+    <li *ngIf="authService.isAdmin" class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" role="button" aria-haspopup="true" aria-expanded="false">Manage
+        User</a>
+      <div class="dropdown-menu" id="dropdownMenu1">
+        <a class="dropdown-item" [routerLink]="['admin/listUsers']">List User</a>
+        <a class="dropdown-item" [routerLink]="['admin/addUser']" routerLinkActive="router-link-active">Create User</a>
+      </div>
+    </li>
+    <li *ngIf="authService.isTS" class="dropdown nav-item">
+      <a class="dropdown-toggle nav-link" role="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage
+        Ticket and Seat</a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <a class="dropdown-item" [routerLink]="['ticket-seller/list-tickets']">List Tickets</a>
+      </div>
+    </li> 
+  </ul>
+
+
   <div *ngIf="!authService.isLogin" class="ml-auto">
     <ul class="navbar-nav ">
       <li *ngIf="!authService.isLogin" class="nav-item">
@@ -25,10 +37,13 @@
 
   <div *ngIf="authService.isLogin" class="ml-auto">
     <div class="dropdown">
-      <button class="btn btn-light dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"  aria-haspopup="true"
-        aria-expanded="false"><i class="material-icons">person</i> Welcome {{authService.user.userName}}</button>
+      <button class="btn btn-light dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <i class="material-icons">person</i> Welcome {{authService.user.userName}}</button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="authService.signOut();"  >Sign Out</a>
+        <a class="dropdown-item" [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="authService.signOut();">Sign
+          Out
+        </a>
       </div>
     </div>
   </div>

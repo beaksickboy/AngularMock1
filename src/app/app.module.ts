@@ -16,26 +16,30 @@ import { BookingModule } from './booking/booking.module';
 import { AdminModule } from './admin/admin.module';
 
 
+import { tiketSellerModule } from './tiket-seller/tiket-seller.module';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
+  
+   
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
-    FormsModule,
+    FormsModule,  
     ReactiveFormsModule,
     HttpClientModule,
-
-
 
     AuthModule,
     BookingModule,
     RoutingModule,
     AdminModule,
+    tiketSellerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

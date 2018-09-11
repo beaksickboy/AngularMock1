@@ -49,11 +49,19 @@ export class LoginComponent implements OnInit {
       (user: User) => {
         console.log(user);
 
-        if (+user.role.roleId === 0) {
+        if (user.role.roleId === 0) {
+
           this.authService.isAdmin = true;
-          this.router.navigate(['/listUsers']);
-        } else {
+          this.router.navigate(['/admin/listUsers']);
+        }
+        else if (user.role.roleId === 1) {
+
+          this.authService.isTS = true;
+          this.router.navigate(['/ticket-seller/list-tickets']);
+        }
+        else {
           this.authService.isAdmin = false;
+          this.authService.isTS = false;
           this.router.navigate(['/home']);
         }
         this.authService.user = user;

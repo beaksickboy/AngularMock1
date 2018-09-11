@@ -59,6 +59,7 @@ export class EditUsersComponent implements OnInit {
       password: this.editForm.value['pass'],
       email: this.editForm.value['email'],
       fullName: this.editForm.value['name'],
+      phone:this.editForm.value['phone'],
       role: {
         roleId: this.userRole
       }
@@ -67,7 +68,7 @@ export class EditUsersComponent implements OnInit {
     this.us.updateUser(+this.userId, user).subscribe(
       (data) => {
         this.us.userChangeSubject.next(true);
-        this.router.navigate(['/listUsers']);
+        this.router.navigate(['/admin/listUsers']);
       }
     );
 
