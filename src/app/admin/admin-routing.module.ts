@@ -7,12 +7,14 @@ import { EditUsersComponent } from './edit-users/edit-users.component';
 
 
 const routes: Routes = [
-    {path: 'listUsers', component: ListUsersComponent},
-    {path: 'adminHome', component: AdminHomeComponent},
-    {path: 'addUser', component: AddUsersComponent},
-
-    {path: 'editUser/:id', component: EditUsersComponent}
-];
+    {
+        path: 'admin', children: [
+            {  path: 'listUsers', component: ListUsersComponent},
+            { path: 'addUser', component: AddUsersComponent },
+            { path: 'editUser/:id', component: EditUsersComponent }
+        ]
+    }
+]
 
 @NgModule({
 

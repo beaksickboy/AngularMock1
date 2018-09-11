@@ -1,0 +1,8 @@
+<div class=" search mb-3 mt-3 ">
+    <form (ngSubmit)="Find()" [formGroup]="search" > 
+      <div class="form-inline">
+      <input type="text" class="form-control" formControlName="searchVal">
+      <button class="btn btn-success ml-3 " type="submit">Search</button>
+    </div>
+    </form>
+  </div>

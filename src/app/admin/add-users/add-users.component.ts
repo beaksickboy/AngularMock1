@@ -47,7 +47,7 @@ export class AddUsersComponent implements OnInit {
     this.us.addUser(this.userRole, user).subscribe(
       (data) => {
         this.us.userChangeSubject.next(true);
-        this.route.navigate(['/listUsers']);
+        this.route.navigate(['/admin/listUsers']);
       }
     )
    
@@ -70,7 +70,7 @@ export class AddUsersComponent implements OnInit {
   confirmCancel() {
     let a = confirm("Are you sure");
     if (true) {
-      this.route.navigate(["/listUsers"]);
+      this.route.navigate(["/admin/listUsers"]);
     } else {
 
     }

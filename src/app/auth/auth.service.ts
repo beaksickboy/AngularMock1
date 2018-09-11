@@ -15,6 +15,7 @@ export class AuthService {
 
     isAdmin: boolean;
     isLogin: boolean;
+    isTS: boolean;
     user: User;
 
     checkUserAccount(username, password) {
@@ -42,6 +43,7 @@ export class AuthService {
         if(a){
             this.isAdmin = false;
             this.isLogin = false;
+            this.isTS = false;
             this.user = null;
         }
 

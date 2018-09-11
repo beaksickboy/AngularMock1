@@ -7,11 +7,11 @@ import { Routes } from '../../share/routes.model';
   styleUrls: ['./result-search.component.css']
 })
 export class ResultSearchComponent implements OnInit {
-  routes:Routes[]=[
-    {id:1,to:"HCM",from:"HN",date:"25/8/2018" ,price:500000},
-    {id:1,to:"HCM",from:"HN",date:"25/8/2018" ,price:500000},
-    {id:1,to:"HCM",from:"HN",date:"25/8/2018" ,price:500000}
-  ];
+  // routes:Routes[]=[
+  //   {id:1,to:"HCM",from:"HN",date:"25/8/2018" ,price:500000},
+  //   {id:1,to:"HCM",from:"HN",date:"25/8/2018" ,price:500000},
+  //   {id:1,to:"HCM",from:"HN",date:"25/8/2018" ,price:500000}
+  // ];
   constructor() { }
 
   ngOnInit() {

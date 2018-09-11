@@ -28,6 +28,11 @@ export class ListUsersComponent implements OnInit {
     this.userService.userChangeSubject.subscribe(
       (data) => this.loadUser()
     );
+
+    this.userService.userSearchSubject.subscribe(
+      (data) => this.users = this.userService.user
+    )
+    
   }
 
   loadUser() {
