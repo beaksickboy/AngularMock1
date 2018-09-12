@@ -1,0 +1,29 @@
+<div class="card ">
+    
+    <form (ngSubmit)="createUser()" [formGroup]="formCreate" >
+        <h2>CREATE USER</h2>
+        <hr>
+      <div class="form-group col-xm-12 col-md-12 col-lg-12">
+        <label>Full Name:</label>
+        <input class="form-control" type="text" placeholder="Input your name" formControlName="name" required>
+        <label>Username: </label>
+        <input class="form-control" type="text" placeholder="Input your username" formControlName="uname" required>
+        <label>Password: </label>
+        <input class="form-control" type="password" placeholder="Input your password" formControlName="pass" required>
+        <label>Email: </label>
+        <input class="form-control" type="email" placeholder="Input your email" formControlName="email" required>  
+        <br>
+        <label>Role: </label>
+        <select  id="role-select" formControlName="role" required #s (change)="changeRole(s)">
+            <option value=0 [selected]="userRole == 0">Admin</option>
+            <option value=1 [selected]="userRole == 1">Customer</option>
+            <option value=2 [selected]="userRole == 2">Ticket Seller</option>
+        </select>
+      </div>
+      <div>
+        <button class=" but btn btn-danger"  type="submit" >Finish!</button>
+        <button class=" but btn btn-primary" type="button" (click)="confirmCancel();" >Cancel</button>
+      </div>
+    </form>
+  </div>
+  

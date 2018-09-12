@@ -1,0 +1,39 @@
+
+  <div class="big" [@slideIn] [@slideOut]='state'>
+    <mat-progress-bar mode="indeterminate" *ngIf="inProgress" class="progress">
+    </mat-progress-bar>
+    <mat-card class="card-width">
+
+
+      <form class="form-width" (ngSubmit)="login()" [formGroup]="formLogin">
+        <div class="img-width">
+          <img src="assets/bus_logo.png" class="mx-auto d-block img-fluid">
+        </div>
+
+        <mat-card-title> Sign in </mat-card-title>
+
+
+        <mat-form-field class="mat-form-field-width">
+          <input matInput placeholder="Username" type="text" formControlName="username">
+          <mat-error *ngIf="username.hasError('required')">
+            Please enter your username
+          </mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="mat-form-field-width">
+          <input matInput placeholder="Password" type="password" formControlName="password">
+          <mat-error *ngIf="password.hasError('required')">
+            Please enter your password
+          </mat-error>
+        </mat-form-field>
+
+
+        <mat-card-footer>
+          <button mat-button class="light-blue" type="button" (click)="activeAnimation()">Create Account</button>
+          <button mat-raised-button color="primary" type="submit">Login</button>
+        </mat-card-footer>
+
+      </form>
+
+    </mat-card>
+  </div>

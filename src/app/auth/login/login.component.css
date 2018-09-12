@@ -1,0 +1,55 @@
+.card-width {
+    height: 500px;
+}
+
+
+.mat-form-field-width {
+    width: 100%;
+   
+}
+
+.img-width {
+    width: 100%;
+}
+img {
+    
+    height: 100px;
+ 
+    /* margin-left:37%; */    
+}
+
+.form-width {
+    width: 100%;
+}
+
+
+
+mat-card-title {
+    padding-top: 15%;
+    text-align: center;
+}
+
+mat-card-footer {
+    padding-top: 10%;
+    max-height: 65.42px;
+}
+
+button.mat-raised-button {
+    margin-left: 40%;
+    background-color: rgb(26, 115, 232);
+}
+
+.light-blue {
+    color: rgb(47, 107, 218);
+}
+
+.big {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+}
+
+.progress {
+    margin-bottom: 0;
+}

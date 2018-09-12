@@ -1,0 +1,17 @@
+ul li{
+    font-size: 20px;
+    padding: 0px 5px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.navbar-brand {
+    position: relative;
+    
+    width: 100px;
+    left: 15px;
+    background-size: contain;
+}

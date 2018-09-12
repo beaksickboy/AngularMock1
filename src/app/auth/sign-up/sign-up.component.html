@@ -1,0 +1,76 @@
+<mat-card class="card-width" [@slideIn] [@slideOut]='state'>
+    <div class="row">
+
+        <div class="col">
+            <img src="assets/bus_logo.png" class="img-left">
+
+            <form [formGroup]="formSignup" (ngSubmit)="signup()">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Full name" formControlName="fullname" />
+
+                    <mat-error *ngIf="fullName.hasError('required')">
+                        Please enter your fullname
+                    </mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Email" type="email" formControlName="email">
+                    <mat-error *ngIf="email.hasError('required')">
+                        Please enter your email address
+                    </mat-error>
+                    <mat-error *ngIf="email.hasError('email')">
+                        Please enter a valid email address
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Username" formControlName="username">
+                    <mat-error *ngIf="username.hasError('required')">
+                        Please enter your username
+                    </mat-error>
+                    <mat-error *ngIf="username.hasError('conflictUsername')">
+                        Please choose another account name
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="row" formGroupName="passGroup">
+
+                    <div class="col">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Password" type="password" formControlName="password">
+
+                            <mat-error *ngIf="password.hasError('required')">
+                                Please enter your password
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                    <div class="col">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Confirm Password" type="password" formControlName="confirm">
+                            <mat-error *ngIf="confirm.hasError('required')">
+                                Please confirm your password
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-error *ngIf="passGroup.hasError('conflictPassword') && confirm.touched">
+                            Please match two password
+                        </mat-error>
+                    </div>
+
+
+                </div>
+                <br><br>
+                <button class="btn btn-primary bt" type="submit">Sign up</button>
+                <a (click)="navigateToSignin()" class="btn btn-light align bt"> Back to Sign in </a>
+            </form>
+
+        </div>
+
+
+
+    </div>
+
+</mat-card>
